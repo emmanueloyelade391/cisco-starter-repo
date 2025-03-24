@@ -1,19 +1,19 @@
+import React, { Component } from 'react';
 import './App.css';
-import Banner from './components/Banner';
-import Exhibit from './components/Exhibit';
+import Banner from './Banner';
+import Exhibit from './Exhibit';
 
-
-function App() {
-  return (
-    <div className="min-h-screen bg-white">
-      <Banner />
-      <div className="p-4">
-        <Exhibit heading="Example Exhibit">
-          <p>This is an example of an exhibit component!</p>
-        </Exhibit>
-      </div>
-    </div>
-  );
+class App extends Component {
+    render() {
+        return (
+            <div className="App">
+                <Banner bannerText="Sextant" />
+                <Exhibit name="Exhibit 1"></Exhibit>
+                <Exhibit name="Exhibit 2"></Exhibit>
+                <Exhibit name="Exhibit 3"></Exhibit>
+            </div>
+        );
+    }
 }
 
 export default App;

@@ -1,9 +1,14 @@
-const Banner = () => {
-  return (
-    <div className="bg-blue-500 text-white py-4 text-center text-2xl font-bold shadow-lg">
-      Sextant
-    </div>
-  );
-};
+import React, { Component } from 'react';
+import './Banner.css';
+
+class Banner extends Component {
+    render() {
+        return (
+            <div className="Banner">
+                <h1>{this.props.bannerText}</h1>
+            </div>
+        );
+    }
+}
 
 export default Banner;

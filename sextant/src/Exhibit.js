@@ -1,10 +1,20 @@
-const Exhibit = ({ heading, children }) => {
-  return (
-    <div className="border border-blue-300 rounded-2xl p-4 m-4 bg-blue-50 shadow-md">
-      <h2 className="text-blue-700 font-semibold text-xl mb-2">{heading}</h2>
-      <div>{children}</div>
-    </div>
-  );
-};
+import React, { Component } from 'react';
+import './Exhibit.css';
+
+class Exhibit extends Component {
+    render() {
+        return (
+          <div className="ExhibitContainer">
+            <div className="Exhibit">
+                <h2 className="ExhibitHeading">{this.props.name}</h2>
+                <div className="ExhibitContent">
+                    {this.props.children}
+                </div>
+            </div>
+          </div>
+            
+        );
+    }
+}
 
 export default Exhibit;
