@@ -2,33 +2,22 @@ import React, { Component } from 'react';
 import './App.css';
 import Banner from './Banner';
 import Exhibit from './Exhibit';
+import AddressDisplay from './IPAddress';
 
 class App extends Component {
-    render() {
-        return (
-            <div className="App">
-                <Banner bannerText="Sextant" />
-                <Exhibit name="Exhibit 1"></Exhibit>
-                <Exhibit name="Exhibit 2"></Exhibit>
-                <Exhibit name="Exhibit 3"></Exhibit>
-            </div>
-        );
-    }
- 
-    IPAddress() {
+  render() {
       return (
-        <div className="min-h-screen bg-white">
-      <Banner />
-      <div className="p-4">
-        <Exhibit heading="Public IP Addresses">
-          <IPAddress type="ipv4" />
-          <IPAddress type="ipv6" />
-        </Exhibit>
-      </div>
-    </div>
+          <div className="App">
+              <Banner bannerText="Sextant" />
+              <Exhibit name="Public IPv4 Address">
+                  <AddressDisplay url='https://api.ipify.org?format=json' />
+              </Exhibit>
+              <Exhibit name="Public IPv6 Address">
+                  <AddressDisplay url='https://api64.ipify.org?format=json' />
+              </Exhibit>
+          </div>
       );
-    }
-    
+  }
 }
 
 export default App;
