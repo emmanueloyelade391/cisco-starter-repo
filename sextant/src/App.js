@@ -14,6 +14,21 @@ class App extends Component {
             </div>
         );
     }
+ 
+    IPAddress() {
+      return (
+        <div className="min-h-screen bg-white">
+      <Banner />
+      <div className="p-4">
+        <Exhibit heading="Public IP Addresses">
+          <IPAddress type="ipv4" />
+          <IPAddress type="ipv6" />
+        </Exhibit>
+      </div>
+    </div>
+      );
+    }
+    
 }
 
 export default App;
